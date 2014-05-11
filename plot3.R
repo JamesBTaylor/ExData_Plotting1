@@ -44,7 +44,7 @@ power_data[,datetime:=as.POSIXct(paste(power_data$date,power_data$time))]
 #write chart to PNG
 png(file="C:/Users/bernie/Data Exploration/Assignment 1/plot3.png",width=480,height=480,res=72)
 #par(cex=72/120)
-with(power_data,plot(datetime,Sub_metering_1,type='l',ylab=""))
+with(power_data,plot(datetime,Sub_metering_1,type='l',xlab="",ylab="Energy sub metering"))
 with(power_data,lines(datetime,Sub_metering_2,col='red'))
 with(power_data,lines(datetime,Sub_metering_3,col='blue'))
 with(power_data,legend("topright",lty=1,col=c("black","red","blue"),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3")))
